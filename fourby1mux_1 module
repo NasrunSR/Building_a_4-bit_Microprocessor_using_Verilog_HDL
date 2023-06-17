@@ -1,0 +1,17 @@
+module fourby1mux_1(V3,V2,V1,V0,A,B,C,D,S,X3,X2,X1,X0);
+
+input V3,V2,V1,V0,A,B,C,D,S;
+output X3,X2,X1,X0;
+
+assign X3=S?A:V3;
+
+assign X2=S?B:V2;
+
+assign X1=S?C:V1;
+
+assign X0=S?D:V0;
+
+
+endmodule
+
+
