@@ -1,5 +1,3 @@
-//test module
-
 module test(SW,KEY,RESET,EN,LEDR,HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,Tc,Ta,Tb,To,Talu,Tdec,Trom,Tromin,Tmuxin,Tmuxout,Tr,Tcarry,Tjump,Tdf,Tcount);
 
 input [9:0] SW;
