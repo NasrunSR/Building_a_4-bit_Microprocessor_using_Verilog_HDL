@@ -1,0 +1,22 @@
+module ALU_ad_sub(A,B,S,SUM,Carry);
+
+input [3:0] A;
+input [3:0] B;
+input S;
+
+output [3:0] SUM;
+output Carry;
+
+wire B0,B1,B2,B3,C0,C1,C2;
+
+assign B0=B[0]^S;
+assign B1=B[1]^S;
+assign B2=B[2]^S;
+assign B3=B[3]^S;
+
+fulladder F0(S,A[0],B0,SUM[0],C0);
+fulladder F2(C0,A[1],B1,SUM[1],C1);
+fulladder F3(C1,A[2],B2,SUM[2],C2);
+fulladder F4(C2,A[3],B3,SUM[3],Carry);
+
+endmodule
