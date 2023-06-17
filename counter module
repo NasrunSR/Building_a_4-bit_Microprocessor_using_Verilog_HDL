@@ -1,0 +1,22 @@
+
+module counter(A,clk,J, reset, out);
+
+input [3:0] A;
+input clk,J;
+input reset;
+output reg [3:0] out;
+reg [3:0] X;
+always @(posedge clk)
+begin 
+
+if(reset==1'b0)
+out<=0;
+else if(J==1'b1)
+begin
+out<=A;
+
+end
+else 
+out<=out+1'b1;
+end
+endmodule
