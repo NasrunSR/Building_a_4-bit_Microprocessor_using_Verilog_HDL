@@ -1,0 +1,16 @@
+module d1_1(Z, HEX1);
+
+input Z;
+output [6:0] HEX1;
+
+
+assign HEX1[0]=Z;
+assign HEX1[1]=1'b0;
+assign HEX1[2]=1'b0;
+assign HEX1[3]=Z;
+assign HEX1[4]=Z;
+assign HEX1[5]=Z;
+assign HEX1[6]=1'b1;
+
+
+endmodule
