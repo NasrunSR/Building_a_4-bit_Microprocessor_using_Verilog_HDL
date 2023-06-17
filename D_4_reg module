@@ -1,0 +1,24 @@
+module D_4_reg(A,CLK,EN,RESET,Qo);
+
+input [3:0] A;
+input CLK,EN,RESET;
+output reg [3:0] Qo;
+
+wire [3:0] d;
+
+dff_1bit D0(A[0],CLK,EN,RESET,d[0]);
+dff_1bit D1(A[1],CLK,EN,RESET,d[1]);
+dff_1bit D2(A[2],CLK,EN,RESET,d[2]);
+dff_1bit D3(A[3],CLK,EN,RESET,d[3]);
+
+always @(posedge CLK or negedge RESET)
+begin
+
+Qo[0]<=d[0];
+Qo[1]<=d[1];
+Qo[2]<=d[2];
+Qo[3]<=d[3];
+
+
+end
+endmodule
