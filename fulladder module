@@ -1,0 +1,9 @@
+module fulladder(input Cin, a, b, output s, Co);
+
+		wire w1;
+		
+		assign w1 = a ^ b;
+		assign s = Cin ^ w1;
+		assign Co = w1? Cin : b;
+
+endmodule
