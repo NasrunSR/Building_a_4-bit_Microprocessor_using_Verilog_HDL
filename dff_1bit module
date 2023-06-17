@@ -1,0 +1,24 @@
+module dff_1bit(D,clk,en,reset,Q);
+
+input D, reset,en, clk;
+output Q;
+
+reg Q;
+
+//setting the initial value of output to be 0.
+//initial 
+//begin
+//Q=1'b0;
+
+//end
+
+always @(posedge clk or negedge reset) //Asynchronous reset setting
+begin
+if(reset==1'b0)
+Q<=1'b0;
+else
+if(en)
+Q<=D;
+
+end
+endmodule
