@@ -1,0 +1,10 @@
+module comparator_1(A,B,C,D,Z);
+
+input A,B,C,D;
+//output Z;
+output Z;
+
+assign Z= A&~B&C&~D|A&~B&C&D|A&B&~C&~D|A&B&~C&D|A&B&C&~D|A&B&C&D;
+
+
+endmodule
