@@ -1,0 +1,11 @@
+module A_1(P,Q,R,S,A,B,C,D);
+
+input P,Q,R,S;
+output A,B,C,D;
+
+assign A=1'b0;
+assign B=P&Q&R&~S|P&Q&R&S;
+assign C=P&Q&~R&~S|P&Q&~R&S;
+assign D=P&~Q&R&S|P&Q&~R&S|P&Q&R&S;
+
+endmodule
