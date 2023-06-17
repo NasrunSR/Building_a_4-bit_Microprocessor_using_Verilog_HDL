@@ -1,0 +1,13 @@
+module reg4(D,CLK,EN,reset,Q);
+input reset,EN;
+input CLK;
+
+input [3:0] D;
+output [3:0] Q;
+reg [3:0] Q;
+always @(posedge CLK or negedge reset)
+if (reset==1'b0)
+Q <= 0;
+else if (EN)
+Q <= D;
+endmodule // regN
